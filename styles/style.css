@@ -15,16 +15,12 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.container {
-  max-width: 80%;
-  padding: 0 40px;
-  margin: 0 8%;
-}
-
 
 /* ヘッダー */
-.header_a {
+.header {
   position: fixed;
+  top: 0;
+  left: 0;
   height: 90px;
   width: 100%;
   color: #f9f9f9;
@@ -32,11 +28,12 @@ html {
   z-index: 1000;
 }
 
-.header_a > .container {
+.container {
   height: 90px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0 10%;
 }
 
 /* ロゴ */
@@ -44,12 +41,12 @@ html {
   display: block;
   color: #f9f9f9;
   font-size: 24px;
+  font-weight: 600;
 }
 
 /* ナビゲーション <nav> */
 .header__nav {
   margin-left: 90px;
-
 }
 
 /* リストナビ <ul> */
@@ -115,7 +112,7 @@ html {
 /* fvテキスト */
 .fv__text {
   position: absolute;
-  top: 85%;
+  top: 800px;
   left: 18.5%;
   transform: translate(-50%, -50%);
   padding: 0;
@@ -279,12 +276,15 @@ html {
 
 
 /* news&topic */
+.news {
+  margin: 0 10%;
+}
+
 .news__subtitle {
   font-size: 26px;
   font-weight: 550;
   text-align:left;
-  padding: 0 40px;
-  margin: 56px 8% 32px;
+  margin: 56px 0 32px;
   color: #8A7338;
 }
 
@@ -292,11 +292,6 @@ html {
   font-size: 16px;
   font-weight: 500;
   margin-left: 2%;
-}
-
-.news__list {
-  margin: 0 8%;
-  padding: 0 40px;
 }
 
 .news__list__item {
@@ -431,7 +426,7 @@ html {
 
 /* コロナウイルス対策に関して */
 .corona {
-  margin-bottom: 280px;
+  margin: 280px 10% 280px;
 }
 
 .corona__title {
@@ -441,13 +436,12 @@ html {
   color: #f9f9f9;
   background-color: #363636;
   padding: 0.7em;
-  margin: 280px auto 0;
+  margin: 0 auto;
 }
 
 .corona__nav__wrapper {
   display: flex;
   justify-content: center;
-  width: 78%;
   margin: 0 auto;
   background-color: #8A7338;
   padding-top: 40px;
@@ -529,8 +523,7 @@ html {
 
 /* 客室、温泉、料理 */
 .others__a {
-  max-width: 78%;
-  margin: 0 auto 280px;
+  margin: 0 10% 280px;
 }
 
 .rooms {
@@ -677,8 +670,7 @@ html {
 
 /* その他 */
 .others__b {
-  width: 78%;
-  margin: 0 auto;
+  margin: 0 10%;
   display: flex;
   justify-content: space-between;
 }
@@ -774,7 +766,7 @@ html {
 
 /* フッター */
 .footer {
-  margin-top: 280px;
+  margin-top: 240px;
   width: 100%;
   height: 450px;
   background-color: #2E2E2E;
