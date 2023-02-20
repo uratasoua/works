@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 body {
@@ -15,6 +15,25 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  font-size: 32px;
+  letter-spacing: 0.05em;
+}
+
+h2 {
+  font-size: 24px;
+  letter-spacing: 0.05em;
+}
+
+p {
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+
+.p__title {
+  font-weight: 500;
+}
 
 /* ヘッダー */
 .header {
@@ -689,7 +708,7 @@ html {
 }
 
 .other:nth-child(1) {
-  background-image: url(images/amy-vann-Vv_uKfiWCE8-unsplash.jpg);
+  background-image: url(../images/category2/background_img/amy-vann-Vv_uKfiWCE8-unsplash.jpg);
 }
 
 .other__inner {
@@ -839,4 +858,11 @@ html {
 }
 .footer__nav__item:nth-child(7) {
   width: 140px;
+}
+
+
+/* ページ同一設定 */
+.page__title {
+  text-align: center;
+  margin: 240px 0 80px;
 }

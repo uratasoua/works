@@ -8,3 +8,4 @@ $('.slider__list').slick({
   infinite: true,         //スライドのループ
   pauseOnHover: false,    //ホバーしたときにスライドを一時停止しない　
 });
+
