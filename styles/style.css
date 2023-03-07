@@ -3,9 +3,12 @@
 
 body {
   font-family: 'Noto Serif JP';
+  background: #F4F2EB;
 }
 
 a {
+  font-size: 16px;
+  letter-spacing: 0.05em;
   text-decoration: none;
   color: #060606;
 }
@@ -25,6 +28,11 @@ h2 {
   letter-spacing: 0.05em;
 }
 
+h3 {
+  font-size: 18px;
+  letter-spacing: 0.05em;
+}
+
 p {
   font-size: 16px;
   letter-spacing: 0.05em;
@@ -40,7 +48,7 @@ p {
   position: fixed;
   top: 0;
   left: 0;
-  height: 90px;
+  height: 120px;
   width: 100%;
   color: #f9f9f9;
   background: rgba(0, 0, 0, 0.488);
@@ -48,7 +56,7 @@ p {
 }
 
 .container {
-  height: 90px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -57,15 +65,11 @@ p {
 
 /* ロゴ */
 .header__logo .logo {
+  letter-spacing: 0;
   display: block;
   color: #f9f9f9;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 600;
-}
-
-/* ナビゲーション <nav> */
-.header__nav {
-  margin-left: 90px;
 }
 
 /* リストナビ <ul> */
@@ -77,7 +81,6 @@ p {
 
 .nav__wrapper li {
   list-style: none;
-  font-size: 14px;
 }
 
 .nav__wrapper > li + li {
@@ -132,15 +135,13 @@ p {
 .fv__text {
   position: absolute;
   top: 800px;
-  left: 18.5%;
-  transform: translate(-50%, -50%);
+  left: 10%;
   padding: 0;
   margin: 0;
   color: #f9f9f9;
 }
 
 .fv__phonenumber {
-  font-size: 28px;
   font-weight: 600;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -152,11 +153,14 @@ p {
   margin-left: 12px;
 }
 
-.fv__reservetime {
-  font-size: 18px;
-  font-weight: 600;
+.fv__phonenumber span {
+  margin: 2px;
 }
 
+.fv__text p {
+  font-size: 20px;
+  font-weight: 600;
+}
 
 /* スクロールダウン */
 .scrolldown4 {
@@ -325,9 +329,7 @@ p {
 .news__list__item a {
   position: relative;
   display: flex;
-  padding-right: 30px;
-  line-height: 2em;
-  font-size: 14px;
+  align-items: center;
 }
 
 .news__list__item:hover {
@@ -346,8 +348,14 @@ p {
   line-height: 2em;
 }
 
+.news__item__time {
+  font-size: 14px;
+  margin-left: 24px;
+  margin-top: 2px;
+}
+
 .news__arrow {
-  width: 25px;
+  width: 36px;
   height: 1px;
   background: #707070;
   position: absolute;
@@ -358,13 +366,13 @@ p {
 .news__arrow::after {
   content: "";
   display: block;
-  width: 6px;
+  width: 10px;
   height: 1px;
   background: #707070;
   transform: rotate(45deg);
   position: absolute;
-  right: 0px;
-  bottom: 2px;
+  right: -2px;
+  bottom: 3px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -398,10 +406,9 @@ p {
   align-items: center;
   position: relative;
   margin: 16px auto 0;
-  padding: 1.2em 2em;
-  width: 150px;
+  padding: 1.4em 2em;
+  width: 160px;
   color: #f9f9f9;
-  font-size: 14px;
   font-weight: 500;
   background-color: #363636;
   transition: 0.3s;
@@ -445,16 +452,16 @@ p {
 
 /* コロナウイルス対策に関して */
 .corona {
-  margin: 280px 10% 280px;
+  margin: 280px 10%;
 }
 
 .corona__title {
-  display: flex;
+  position: relative;
+  bottom: -40px;
   width: fit-content;
-  font-size: 28px;
   color: #f9f9f9;
   background-color: #363636;
-  padding: 0.7em;
+  padding: 0.8em;
   margin: 0 auto;
 }
 
@@ -463,13 +470,14 @@ p {
   justify-content: center;
   margin: 0 auto;
   background-color: #8A7338;
-  padding-top: 40px;
+  padding-top: 80px;
+  padding-bottom: 40px;
 }
 
 .corona__nav__item {
   color: #f9f9f9;
-  width: 230px;
-  padding: 36px 40px;
+  width: 236px;
+  padding: 0 40px;
 }
 
 .corona__item__img img {
@@ -479,20 +487,13 @@ p {
 .corona__item__name {
   padding: 2em 0;
   text-align: center;
-  font-size: 16px;
   font-weight: 600;
-  letter-spacing: 1px;
 }
-
-.corona__item__text {
-  font-size: 14px;
-  line-height: 20px;
-}
-
 
 /* ホテルアバウト */
 .hotelabout {
-  background-image: url(/Users/souaurata/Workspace/Website/images/julia-koizumi-NOSuEGrC5JU-unsplash.jpg);
+  display: flex;
+  background-image: url(../images/julia-koizumi-NOSuEGrC5JU-unsplash.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -515,28 +516,17 @@ p {
   left: 0;
 }
 
-.hotelabout .hotelabout__text {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-size: 32px;
-  color: #DABD74;
-  font-weight: bold;
+.hotelabout__box {
+  position: relative;
+  color: #f9f9f9;
   text-align: center;
 }
 
-.hotelabout__subtext {
-  position: absolute;
-  top: 54%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+.hotelabout__box p {
+  margin-top: 80px;
+  margin-bottom: 50px;
   font-size: 20px;
-  color: #fff;
-  line-height: 2.2em;
-  text-align: center;
+  line-height: 2em;
 }
 
 
@@ -545,13 +535,13 @@ p {
   margin: 0 10% 280px;
 }
 
-.rooms {
+.link__box {
   display: flex;
   width: 1220px;
   margin-bottom: 200px;
 }
 
-.rooms:nth-child(2) {
+.link__box:nth-child(2) {
   margin: 0 0 200px auto;
 }
 
@@ -572,31 +562,25 @@ p {
 }
 
 .slider__tx {
+  display: flex;
+  flex-direction: column;
   width: 30%;
   background-color: #AFA3A7;
   color: #f9f9f9;
+  padding: 80px 70px;
+  justify-content: space-between;
 }
 
 .slider__tx__title {
-  font-size: 32px;
   font-weight: 600;
-  padding-top: 90px;
-  padding-left: 50px;
-  padding-right: 50px;
 }
 
-.slider__tx__sub {
-  font-size: 16px;
-  line-height: 24px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 40px;
-  padding-bottom: 50px;
-}
+/* .slider__tx__sub {
+  padding: 40px 50px 50px;
+} */
 
 .slider__tx__button {
   text-align: right;
-  padding-right: 60px;
 }
 
 .slider__tx__button a {
@@ -605,11 +589,10 @@ p {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  padding: 1.4em 2em;
+  padding: 1.3em 2em;
   font-weight: 500;
   width: 140px;
   color: #363636;
-  font-size: 14px;
   background-color: #f9f9f9;
   transition: 0.3s;
 }
@@ -622,12 +605,12 @@ p {
 .slider__tx__button a::before {
   content: '';
   position: absolute;
-  top: calc(62% - 4px);
-  right: 0.9em;
-  transform: translateY(calc(-62% - 2px)) rotate(24deg);
-  width: 30px;
+  top: 50%;
+  right: 0.8em;
+  transform: rotate(45deg);
+  width: 16px;
   height: 1.5px;
-  background-color: #363636;
+  background-color: #707070;
   transition: 0.3s;
 }
 
@@ -635,12 +618,11 @@ p {
 .slider__tx__button a::after {
   content: '';
   position: absolute;
-  top: 62%;
+  top: 60%;
   right: 1em;
-  transform: translateY(-62%);
-  width: 56px;
-  height: 1.5px;
-  background-color: #363636;
+  width: 48px;
+  height: 1.2px;
+  background-color: #707070;
   transition: 0.3s;
 }
 
@@ -699,25 +681,79 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 310px;
-  height: 600px;
+  width: 440px;
+  height: 680px;
   background-color: #707070;
-  outline: 1px solid #FFFFFF7a;
+  outline: 1px solid #ffffff;
   outline-offset: -12px;
   object-fit: cover;
 }
 
 .other:nth-child(1) {
+  position: relative;
   background-image: url(../images/category2/background_img/amy-vann-Vv_uKfiWCE8-unsplash.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.other:nth-child(1)::before {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.384);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.other:nth-child(2) {
+  position: relative;
+  background-image: url(../images/category2/background_img/anna-bielan-l6QU5SHinP8-unsplash.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.other:nth-child(2)::before {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.384);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.other:nth-child(3) {
+  position: relative;
+  background-image: url(../images/category2/background_img/dmitry-ganin-nMxNu3z9otE-unsplash.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.other:nth-child(3)::before {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.384);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .other__inner {
-  padding: 0 50px;
+  position: relative;
+  padding: 0 80px;
 }
 
 .other__img {
   margin-top: 110px;
-  margin-bottom: 32px;
+  margin-bottom: 4px;
   width: auto;
   text-align: center;
 }
@@ -743,7 +779,7 @@ p {
 .other__btn {
   width: max-content;
   margin: 0 auto;
-  padding-top: 90px;
+  padding-top: 70px;
 }
 
 .other__btn a {

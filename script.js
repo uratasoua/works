@@ -1,5 +1,5 @@
 $('.slider__list').slick({
-  autoplay: true,         //自動再生
+  autoplay: false,         //自動再生
   autoplaySpeed: 2000,    //自動再生のスピード
   fade: true,             //再生の仕方をフェードイン・フェードアウトにする
   speed: 2200,             //スライドするスピード

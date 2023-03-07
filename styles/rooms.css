@@ -1,0 +1,210 @@
+@charset "UTF-8";
+
+body {
+  background: #F4F2EB;
+}
+
+.rooms {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.rooms__about {
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+.foods__line {
+  margin-bottom: 160px;
+}
+
+.room__box {
+  position: relative;
+  width: 680px;
+  height: 560px;
+}
+
+.rb2 {
+  margin-left: auto;
+  transform: translateY(-80px)
+}
+
+.rb3 {
+  transform: translateY(-160px)
+}
+
+.rb4 {
+  margin-left: auto;
+  transform: translateY(-240px)
+}
+
+/* スライダーの設定 */
+.room__slider__list {
+  width: 680px;
+  height: 560px;
+}
+
+.room__slider__item {
+  object-fit: cover;
+}
+
+/*--------画像サイズ調整---------*/
+.room__slider__item img {
+  width: 100%;
+  height: 560px;
+}
+
+/* 画像下テキスト */
+.room__slider__tx {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  height: auto;
+  padding: 40px;
+  background-color: #AFA3A7;
+  color: #f9f9f9;
+
+  position: absolute;
+  top: 480px;
+  right: 100px;
+}
+
+.room__slider__txandbut {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.room__modal__open {
+  letter-spacing: 0.05em;
+  color: #f9f9f9;
+  text-decoration: underline;
+}
+
+.room__slider__tx p {
+  margin-left: 12px;
+}
+
+
+/* モーダル */
+.modal {
+  display: none;/* あとでnoneに変えといて */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #f4f4f4;
+  margin: auto;
+  padding-bottom: 120px;
+  height: 80%;
+  width: 70%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: 1s;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+.modal-header {
+  padding: 26px;
+  text-align: right;
+  height: auto;
+  background: #f4f4f4;
+}
+
+.modal-header span {
+  font-size: 4rem;
+}
+
+.modal-header span:hover {
+  cursor: pointer;
+}
+
+.modal-body {
+  display: flex;
+  padding: 0 90px;
+  color: black;
+}
+
+/* モーダル内スライダー */
+.modal-body__slider {
+  height: 320px;
+  width: 470px;
+}
+
+.modal-body__slider__item {
+  object-fit: cover;
+
+}
+
+.modal-body__slider__item img {
+  width: 100%;
+  height: 320px;
+}
+
+.modal-body__text {
+  margin-left: 90px;
+}
+
+.modal-body__text__title {
+  padding-bottom: 24px;
+}
+
+.modal-body__text__title__p {
+  padding-bottom: 40px;
+}
+
+.modal-body__text__setubi {
+  padding-bottom: 8px;
+}
+
+.modal-body__priceandbutton {
+  margin-top: 120px;
+  justify-content: end;
+  align-items: center;
+  display: flex;
+}
+
+.modal-body__price {
+  font-size: 28px;
+  padding-right: 24px;
+}
+
+.modal-body__price span {
+  font-size: 16px;
+}
+
+.modal-body__button {
+  border: none;
+  cursor: pointer;
+  padding: 24px 70px;
+  background-color: #252525;
+}
+
+.modal-body__button p {
+  color: #f9f9f9;
+}
